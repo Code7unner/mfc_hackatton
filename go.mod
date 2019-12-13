@@ -10,8 +10,10 @@ require (
 	github.com/gin-gonic/gin v1.5.1-0.20191209070435-168fa9451681
 	github.com/golang/protobuf v1.3.3-0.20191022195553-ed6926b37a63
 	github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510 // indirect
+	github.com/joho/godotenv v1.3.0
 	github.com/json-iterator/go v1.1.9-0.20191112144728-44a7e7340d23
 	github.com/kardianos/govendor v1.0.9 // indirect
+	github.com/lib/pq v1.2.0
 	github.com/mattn/go-isatty v0.0.11
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
 	github.com/modern-go/reflect2 v1.0.1
