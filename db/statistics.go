@@ -1,22 +1,22 @@
 package db
 
 type Statistics struct {
-	Id string
-	AverageAwaitingTime int
-	ActiveWorkPlacesCount int
-	CompletedTicketsCount int
-	PendingTicketsCount int
-	Errors []*StatisticsError
-	CompletedTickets []*CompletedTicket
+	Id                    string             `json:"Id"`
+	AverageAwaitingTime   int                `json:"averageAwaitingTime"`
+	ActiveWorkPlacesCount int                `json:"activeWorkPlacesCount"`
+	CompletedTicketsCount int                `json:"completedTicketsCount"`
+	PendingTicketsCount   int                `json:"pendingTicketsCount"`
+	Errors                []*StatisticsError `json:"errors"`
+	CompletedTickets      []*CompletedTicket `json:"completedTickets"`
 }
 
 type StatisticsError struct {
-	Id string
-	Key string
-	Value string
+	Id    string `json:"id"`
+	Key   string `json:"key"`
+	Value string `json:"value"`
 }
 
 type CompletedTicket struct {
-	Hour int
-	Load int
+	Hour int `json:"hour"`
+	Load int `json:"load"`
 }
