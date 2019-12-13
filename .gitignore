@@ -1,5 +1,8 @@
 .idea
 .env
 .docker_build/
+
 bin/
+
 config.env
+heroku.env

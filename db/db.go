@@ -18,12 +18,14 @@ func NewStorage(db *sql.DB) *Storage {
 }
 
 func Connect() *sql.DB {
-	config, err := loadConfig()
+	//config, err := loadConfig()
+	config, err := loadHerokuConfig()
 	if err != nil {
 		log.Fatalf("Error loading config.env file: %v", err)
 	}
 
-	db, err := initDatabase(config)
+	//db, err := initDatabase(config)
+	db, err := initDatabaseWithHeroku(config)
 	if err != nil {
 		log.Fatalf("Error initializing the database: %v", err)
 	}
@@ -70,4 +72,28 @@ func initDatabase(c *Config) (db *sql.DB, err error) {
 
 	db, err = sql.Open("postgres", psqlInfo)
 	return db, err
+}
+
+func initDatabaseWithHeroku(c *HerokuConfig) (db *sql.DB, err error) {
+	db, err = sql.Open("postgres", c.dbUrl)
+	if err != nil {
+		return nil, err
+	}
+
+	return db, nil
+}
+
+type HerokuConfig struct {
+	dbUrl string
+}
+
+func loadHerokuConfig() (config *HerokuConfig, err error) {
+	err = godotenv.Load("heroku.env")
+	if err != nil {
+		log.Fatal("Error loading heroku.env file")
+	}
+
+	config = &HerokuConfig{dbUrl: os.Getenv("DATABASE_URL")}
+
+	return config, err
 }

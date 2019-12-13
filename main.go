@@ -13,14 +13,9 @@ func main() {
 
 	r := gin.Default()
 
-	r.GET("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
-
-	r.GET("/api/parser", gin.WrapF(parser.Parse))
-
+	// Parsing .xlsx file
+ 	r.GET("/api/parser", gin.WrapF(parser.Parse))
+	// Download and update MFC information in db
 	r.GET("/api/server", gin.WrapF(st.GetServerStats))
 
 	if err := r.Run(); err != nil {
