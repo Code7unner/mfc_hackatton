@@ -2,3 +2,4 @@
 .env
 .docker_build/
 bin/
+config.env
