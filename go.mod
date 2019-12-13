@@ -3,7 +3,7 @@ module github.com/mfc_hackatton
 go 1.13
 
 require (
-	github.com/360EntSecGroup-Skylar/excelize v1.4.1 // indirect
+	github.com/360EntSecGroup-Skylar/excelize v1.4.1
 	github.com/Bowery/prompt v0.0.0-20190916142128-fa8279994f75 // indirect
 	github.com/dchest/safefile v0.0.0-20151022103144-855e8d98f185 // indirect
 	github.com/gin-contrib/sse v0.1.1-0.20190905051334-43f0f29dbd2b

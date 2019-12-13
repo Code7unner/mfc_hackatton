@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/mfc_hackatton/parser"
 )
 
 func main() {
@@ -12,6 +13,8 @@ func main() {
 			"message": "pong",
 		})
 	})
+
+	r.GET("/api/parser", gin.WrapF(parser.Parse))
 
 	r.Run()
 }

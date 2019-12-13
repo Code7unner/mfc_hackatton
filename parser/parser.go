@@ -72,10 +72,10 @@ func parseExcel(path string) ([]Service, error) {
 	return services, nil
 }
 
-func parser(w http.ResponseWriter, r *http.Request) {
+func Parse(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
-	s, err := parseExcel("data.xlsx")
+	s, err := parseExcel("assets/data.xlsx")
 	if err != nil {
 		log.Printf("Error parsing excel file, error: %v\n", err)
 		w.WriteHeader(http.StatusInternalServerError)
