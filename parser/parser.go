@@ -26,10 +26,7 @@ func parseExcel(path string) ([]Service, error) {
 
 	services := make([]Service, 0)
 
-	rows, err := f.GetRows("Sheet1")
-	if err != nil {
-		return nil, err
-	}
+	rows := f.GetRows("Sheet1")
 
 	for _, row := range rows {
 		for _, subrow := range row {
