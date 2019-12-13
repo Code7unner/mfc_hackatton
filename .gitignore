@@ -1,6 +1,6 @@
 .env
 .docker_build/
-.idea
+.idea/
 bin/
 config.env
 heroku.env
