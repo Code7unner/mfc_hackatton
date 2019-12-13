@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="671f6ec5-cb5e-4419-a244-e63aae3abdd6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/statistics.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/statistics.go" afterDir="false" />
-    </list>
+    <list default="true" id="671f6ec5-cb5e-4419-a244-e63aae3abdd6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,9 +82,9 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Go Build.go build github.com/mfc_hackatton" />
       <item itemvalue="Go Build.go build mfc_hackatton mfc_hackatton.go" />
       <item itemvalue="Go Build.go build mfc_hackatton" />
-      <item itemvalue="Go Build.go build github.com/mfc_hackatton" />
     </list>
     <recent_temporary>
       <list>
