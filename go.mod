@@ -1,5 +1,7 @@
 module github.com/mfc_hackatton
 
+go 1.13
+
 require (
 	github.com/gin-contrib/sse v0.1.1-0.20190905051334-43f0f29dbd2b
 	github.com/gin-gonic/gin v1.5.1-0.20191209070435-168fa9451681
@@ -15,5 +17,3 @@ require (
 	golang.org/x/sys v0.0.0-20191210023423-ac6580df4449
 	gopkg.in/yaml.v2 v2.2.7
 )
-
-go 1.13
