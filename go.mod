@@ -3,6 +3,7 @@ module github.com/mfc_hackatton
 go 1.13
 
 require (
+	github.com/360EntSecGroup-Skylar/excelize v1.4.1
 	github.com/gin-contrib/sse v0.1.1-0.20190905051334-43f0f29dbd2b
 	github.com/gin-gonic/contrib v0.0.0-20191209060500-d6e26eeaa607
 	github.com/gin-gonic/gin v1.5.1-0.20191209070435-168fa9451681

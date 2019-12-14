@@ -6,7 +6,6 @@ import (
 	"github.com/mfc_hackatton/db"
 	"github.com/mfc_hackatton/parser"
 	"github.com/mfc_hackatton/scheduler"
-	"log"
 	"net/http"
 )
 
@@ -34,10 +33,14 @@ func main() {
 	// Download and update MFC statistics in db
 	r.GET("/api/statistics", gin.WrapF(storage.GetStatistics))
 
+
+	_ = http.ListenAndServe(":8080", r)
+
 	// Run the scheduler
 	scheduler.Schedule(storage)
 
-	if err := r.Run(); err != nil {
-		log.Fatal(err)
-	}
+	//
+	//if err := r.Run(); err != nil {
+	//	log.Fatal(err)
+	//}
 }
