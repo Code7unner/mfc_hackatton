@@ -14,6 +14,9 @@ func main() {
 	r := gin.Default()
 
 	r.LoadHTMLFiles("client/build/index.html")
+	r.GET("/", func(c *gin.Context) {
+		c.HTML(200, "index.html", gin.H{})
+	})
 
 	// Parsing .xlsx file
  	r.GET("/api/parser", gin.WrapF(parser.Parse))
