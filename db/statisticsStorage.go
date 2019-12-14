@@ -55,7 +55,7 @@ func (s *Storage) UpdateStatistics() ([]Statistics, error) {
 	}
 
 	stmt, err := txn.Prepare(pq.CopyIn("statistics", "id", "average_awaiting_time", "active_work_places_count", "completed_tickets_count",
-		"pending_tikets_count"))
+		"pending_tickets_count"))
 	if err != nil {
 		return nil, errors.New(fmt.Sprintf("Cannot prepare the transaction, error: %v\n", err))
 	}

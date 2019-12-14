@@ -54,7 +54,7 @@ func (s *Storage) UpdateServerStats() ([]Server, error) {
 		return nil, errors.New(fmt.Sprintf("Cannot begin database, error: %v\n", err))
 	}
 
-	stmt, err := txn.Prepare(pq.CopyIn("server", "id", "name", "is_connected", "wrong_protocol",
+	stmt, err := txn.Prepare(pq.CopyIn("servers", "id", "name", "is_connected", "wrong_protocol",
 		"organization_name", "organization_fullname", "organization_address", "organization_phone", "organization_fax", "organization_email"))
 	if err != nil {
 		return nil, errors.New(fmt.Sprintf("Cannot prepare the transaction, error: %v\n", err))
