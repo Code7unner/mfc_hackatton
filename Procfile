@@ -1,1 +1,1 @@
-web:./mfc_hackatton
+web:bin/mfc_hackatton
