@@ -5,13 +5,14 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/mfc_hackatton/db"
 	"github.com/mfc_hackatton/parser"
+	"github.com/mfc_hackatton/scheduler"
 	"log"
 	"net/http"
 )
 
 func main() {
 	database := db.Connect()
-	st := db.NewStorage(database)
+	storage := db.NewStorage(database)
 
 	r := gin.New()
 
@@ -27,11 +28,14 @@ func main() {
 	})
 
 	// Parsing .xlsx file
- 	r.GET("/api/parser", gin.WrapF(parser.Parse))
+	r.GET("/api/parser", gin.WrapF(parser.Parse))
 	// Download and update MFC information in db
-	r.GET("/api/server", gin.WrapF(st.GetServerStats))
+	r.GET("/api/server", gin.WrapF(storage.GetServerStats))
 	// Download and update MFC statistics in db
-	r.GET("/api/statistics", gin.WrapF(st.GetStatistics))
+	r.GET("/api/statistics", gin.WrapF(storage.GetStatistics))
+
+	// Run the scheduler
+	scheduler.Schedule(storage)
 
 	if err := r.Run(); err != nil {
 		log.Fatal(err)
