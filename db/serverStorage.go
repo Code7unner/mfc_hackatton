@@ -41,8 +41,8 @@ func (s *Storage) GetServerStats(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusInternalServerError)
 	}
 
-	stmt, err := txn.Prepare(pq.CopyIn("servers", "id", "name", "is_connected", "wrong_protocol",
-		"organization_name", "organization_full_name", "organization_address", "organization_phone", "organization_fax", "organization_email"))
+	stmt, err := txn.Prepare(pq.CopyIn("server", "id", "name", "is_connected", "wrong_protocol",
+		"organization_name", "organization_fullname", "organization_address", "organization_phone", "organization_fax", "organization_email"))
 	if err != nil {
 		log.Printf("Cannot prepare the transaction, error: %v", err)
 		w.WriteHeader(http.StatusInternalServerError)
