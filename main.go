@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
+	_ "github.com/heroku/x/hmetrics/onload"
 	"github.com/mfc_hackatton/db"
 	"github.com/mfc_hackatton/parser"
 	"github.com/mfc_hackatton/scheduler"
