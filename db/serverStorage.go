@@ -79,5 +79,5 @@ func (s *Storage) GetServerStats(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Error encoding servers to json, error: %v\n", err)
 		w.WriteHeader(http.StatusInternalServerError)
 	}
-
+	w.WriteHeader(http.StatusOK)
 }
