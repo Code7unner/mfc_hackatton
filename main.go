@@ -35,7 +35,7 @@ func main() {
 	// Download and update MFC statistics in db
 	r.GET("/api/statistics", gin.WrapF(storage.GetStatistics))
 
-
+	// Port
 	if err := r.Run(":" + os.Getenv("PORT")); err != nil {
 		log.Fatal(err)
 	}
