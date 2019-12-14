@@ -8,4 +8,4 @@ create table if not exists server(
     organization_phone      varchar(20),
     organization_fax        varchar(100),
     organization_email      varchar(100)
-)
+);

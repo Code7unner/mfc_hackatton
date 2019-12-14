@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="671f6ec5-cb5e-4419-a244-e63aae3abdd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/serverStorage.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/serverStorage.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/statistics.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/statistics.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/psql/create_server.sql" beforeDir="false" afterPath="$PROJECT_DIR$/psql/create_server.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +55,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RunDashboard">
