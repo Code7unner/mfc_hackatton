@@ -7,6 +7,7 @@ import (
 	"github.com/mfc_hackatton/parser"
 	"github.com/mfc_hackatton/scheduler"
 	"net/http"
+	"os"
 )
 
 func main() {
@@ -34,13 +35,8 @@ func main() {
 	r.GET("/api/statistics", gin.WrapF(storage.GetStatistics))
 
 
-	_ = http.ListenAndServe(":8080", r)
+	_ = http.ListenAndServe(":" + os.Getenv(os.Getenv("PORT")), r)
 
 	// Run the scheduler
 	scheduler.Schedule(storage)
-
-	//
-	//if err := r.Run(); err != nil {
-	//	log.Fatal(err)
-	//}
 }
