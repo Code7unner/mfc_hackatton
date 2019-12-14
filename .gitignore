@@ -3,7 +3,6 @@
 .idea/
 bin/
 config.env
-heroku.env
 
 go.sum
 
