@@ -3,44 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="671f6ec5-cb5e-4419-a244-e63aae3abdd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/Circe-Bold.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/Circe-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/Circe-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/Circe-ExtraBold.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/Circe-ExtraBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/Circe-ExtraBold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/Circe-ExtraLight.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/Circe-ExtraLight.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/Circe-ExtraLight.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/Circe-Light.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/Circe-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/Circe-Light.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/Circe-Regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/Circe-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/Circe-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/Circe-Thin.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/Circe-Thin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/Circe-Thin.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/fonts/stylesheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/logo2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/moblogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/InfoCard.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/router/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/Home.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/vue.config.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/psql/create_server.sql" beforeDir="false" afterPath="$PROJECT_DIR$/psql/create_server.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/psql/create_statistics.sql" beforeDir="false" afterPath="$PROJECT_DIR$/psql/create_statistics.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
