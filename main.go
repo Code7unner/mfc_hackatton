@@ -9,11 +9,10 @@ import (
 	"github.com/mfc_hackatton/scheduler"
 	"log"
 	"net/http"
-	"os"
 )
 
 func main() {
-	port := ":" + os.Getenv("PORT")
+	//port := ":" + os.Getenv("PORT")
 
 	database := db.Connect()
 	storage := db.NewStorage(database)
@@ -22,6 +21,7 @@ func main() {
 
 	// Middleware
 	r.Use(gin.Logger())
+	r.Use(CORSMiddleware())
 
 	// Frontend
 	r.Use(static.Serve("/", static.LocalFile("client/build", true)))
@@ -39,10 +39,26 @@ func main() {
 	r.GET("/api/statistics", gin.WrapF(storage.GetStatistics))
 
 	// Port
-	if err := r.Run(port); err != nil {
+	if err := r.Run(":8081"); err != nil {
 		log.Fatal(err)
 	}
 
 	// Run the scheduler
 	scheduler.Schedule(storage)
+}
+
+func CORSMiddleware() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
+		c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
+		c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With")
+		c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET, PUT")
+
+		if c.Request.Method == "OPTIONS" {
+			c.AbortWithStatus(204)
+			return
+		}
+
+		c.Next()
+	}
 }
