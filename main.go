@@ -1,10 +1,12 @@
 package main
 
 import (
+	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
 	"github.com/mfc_hackatton/db"
 	"github.com/mfc_hackatton/parser"
 	"log"
+	"net/http"
 )
 
 func main() {
@@ -13,9 +15,12 @@ func main() {
 
 	r := gin.Default()
 
+	// Frontend
+	r.Use(static.Serve("/", static.LocalFile("client/build", true)))
 	r.LoadHTMLGlob("client/build/*.html")
+
 	r.GET("/", func(c *gin.Context) {
-		c.HTML(200, "index.html", nil)
+		c.HTML(http.StatusOK, "index.html", nil)
 	})
 
 	// Parsing .xlsx file
