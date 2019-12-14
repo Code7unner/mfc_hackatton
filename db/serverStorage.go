@@ -48,8 +48,7 @@ func (s *Storage) GetServerStats(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusInternalServerError)
 	}
 
-	for i := range servers {
-		srv := servers[i]
+	for _, srv := range servers {
 		_, err := stmt.Exec(srv.Id, srv.Name, srv.IsConnected, srv.WrongProtocol, srv.OrganizationName, srv.OrganizationFullName, srv.OrganizationAddress,
 			srv.OrganizationPhone, srv.OrganizationFax, srv.OrganizationEmail)
 		if err != nil {

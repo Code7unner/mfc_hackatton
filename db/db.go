@@ -18,14 +18,14 @@ func NewStorage(db *sql.DB) *Storage {
 }
 
 func Connect() *sql.DB {
-	config, err := loadConfig()
-	//config, err := loadHerokuConfig()
+	//config, err := loadConfig()
+	config, err := loadHerokuConfig()
 	if err != nil {
 		log.Fatalf("Error loading config.env file: %v", err)
 	}
 
-	db, err := initDatabase(config)
-	//db, err := initDatabaseWithHeroku(config)
+	//db, err := initDatabase(config)
+	db, err := initDatabaseWithHeroku(config)
 	if err != nil {
 		log.Fatalf("Error initializing the database: %v", err)
 	}
