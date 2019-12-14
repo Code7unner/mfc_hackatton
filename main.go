@@ -37,14 +37,16 @@ func main() {
 	r.GET("/api/server", gin.WrapF(storage.GetServerStats))
 	// Download and update MFC statistics in db
 	r.GET("/api/statistics", gin.WrapF(storage.GetStatistics))
+	// Download and update MFC statistics in db
+	r.GET("/api/mfc", gin.WrapF(storage.GetMFCStats))
+
+	// Run the scheduler
+	go scheduler.Schedule(storage)
 
 	// Port
 	if err := r.Run(":8081"); err != nil {
 		log.Fatal(err)
 	}
-
-	// Run the scheduler
-	scheduler.Schedule(storage)
 }
 
 func CORSMiddleware() gin.HandlerFunc {
