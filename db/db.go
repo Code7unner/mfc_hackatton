@@ -88,7 +88,7 @@ type HerokuConfig struct {
 }
 
 func loadHerokuConfig() (config *HerokuConfig, err error) {
-	err = godotenv.Load("heroku.env")
+	err = godotenv.Load("config.env")
 	if err != nil {
 		log.Fatal("Error loading heroku.env file")
 	}

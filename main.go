@@ -13,7 +13,10 @@ func main() {
 	database := db.Connect()
 	st := db.NewStorage(database)
 
-	r := gin.Default()
+	r := gin.New()
+
+	// Middleware
+	r.Use(gin.Logger())
 
 	// Frontend
 	r.Use(static.Serve("/", static.LocalFile("client/build", true)))
