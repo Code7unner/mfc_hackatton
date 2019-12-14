@@ -13,6 +13,8 @@ func main() {
 
 	r := gin.Default()
 
+	r.LoadHTMLFiles("client/build/index.html")
+
 	// Parsing .xlsx file
  	r.GET("/api/parser", gin.WrapF(parser.Parse))
 	// Download and update MFC information in db
