@@ -1,21 +1,29 @@
 package main
 
 import (
+	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
 	"github.com/mfc_hackatton/db"
 	"github.com/mfc_hackatton/parser"
 	"log"
+	"net/http"
 )
 
 func main() {
 	database := db.Connect()
 	st := db.NewStorage(database)
 
-	r := gin.Default()
+	r := gin.New()
 
-	r.LoadHTMLFiles("client/build/index.html")
+	// Middleware
+	r.Use(gin.Logger())
+
+	// Frontend
+	r.Use(static.Serve("/", static.LocalFile("client/build", true)))
+	r.LoadHTMLGlob("client/build/*.html")
+
 	r.GET("/", func(c *gin.Context) {
-		c.HTML(200, "index.html", gin.H{})
+		c.HTML(http.StatusOK, "index.html", nil)
 	})
 
 	// Parsing .xlsx file
