@@ -5,6 +5,8 @@ bin/
 config.env
 heroku.env
 
+go.sum
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
