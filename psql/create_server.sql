@@ -1,5 +1,5 @@
 create table if not exists server(
-    id                      serial not null primary key,
+    id                      varchar(255) not null,
     name                    varchar(255) not null,
     is_connected            boolean default false,
     wrong_protocol          boolean default false,
